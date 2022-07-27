@@ -11,24 +11,24 @@ composer create-project laravel/laravel laravel9_eloquent_mutators_and_ccessors
 ## 2. Update Migration and Model
 - Vào database/migrations/2014_10_12_000000_create_users_table.php
 ```Dockerfile
-<?phpphp
+<?php
   
-use Illuminate\Database\Migrations\Migration; Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint; Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema; Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
   
-return new class extends Migration new class extends Migration
+return new class extends Migration
 {
-    /**/**
+    /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()public function up()
-    {{
-        Schema::create('users', function (Blueprint $table) {Schema::create('users', function (Blueprint $table) {
-            $table->id();->id();
-            $table->string('name');->string('name');
+    public function up()
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
